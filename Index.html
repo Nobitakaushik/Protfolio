@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaushik Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgba(236, 138, 199, 0.973);
+        color: azure;
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+      }
+      nav {
+        background-color: rgb(40, 27, 56);
+        color: white;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        transition: background-color 0.3s ease-in-out;
+      }
+      nav.scrolled {
+        background-color: rgba(40, 27, 56, 0.9);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        margin: 0px 20px;
+        list-style: none;
+        cursor: pointer;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease-in-out;
+      }
+      nav ul li a:hover {
+        color: rgb(216, 175, 233);
+        font-size: 1.01rem;
+      }
+      main {
+        margin-top: 50px;
+      }
+      hr {
+        border: 0;
+        background: rgba(206, 41, 142, 0.973);
+        height: 1.2px;
+        margin: 40px 80px;
+      }
+      .left {
+        font-size: 1.5rem;
+      }
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 120px 0;
+      }
+      .firstSection > div {
+        width: 30%;
+      }
+      .leftSection {
+        font-size: 2rem;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+      .leftSection.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .rightSection img {
+        width: 90%;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+      .rightSection img.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .purple {
+        color: rgb(115, 38, 209);
+      }
+      #element {
+        color: rgb(113, 43, 199);
+      }
+      .secondSection {
+        max-width: 80vw;
+        margin: auto;
+        height: auto;
+      }
+      .secondSection h1 {
+        font-size: 2rem;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+      .secondSection h1.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .text-gray {
+        color: grey;
+        font-size: 1rem;
+      }
+      .secondSection .box {
+        background: white;
+        width: 80vw;
+        height: auto;
+        margin: 56px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+      .secondSection .box.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .secondSection .vertical {
+        width: 80%;
+        background-color: rgba(87, 13, 13, 0.5);
+        margin: 20px 0;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      .image-top {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        left: -70px;
+        top: -5px;
+      }
+      .vertical-title {
+        margin-left: 80px;
+        font-weight: bold;
+      }
+      .vertical-desc {
+        margin-top: 10px;
+        margin-left: 80px;
+      }
+      .section {
+        padding: 60px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="left">Kaushik Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#technical">Technical Skill</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="home" class="firstSection section">
+        <div class="leftSection">
+          Hi, My name is <span class="purple">Kaushik</span>
+          <div>and I am a</div>
+          <span id="element"></span>
+        </div>
+        <div class="rightSection">
+          <img src="Image/dv.webp" alt="Profile Image" />
+        </div>
+      </section>
+      <hr />
+      <section id="about" class="secondSection section">
+        <h1>About</h1>
+        <div class="box">
+          <div class="vertical">
+            <img class="image-top" src="Image/Pic.jpg" alt="Profile" />
+            <div class="vertical-title"></div>
+            <div class="vertical-desc">
+              My name is Kaushik Prasad. I am from Ranchi, Jharkhand, but currently, I'm staying in Bangalore.
+              My family has four members: my father, mother, sister, and me.
+              My father is a farmer, my mother is a housewife, and my sister is currently studying in Ranchi.
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section id="services" class="secondSection section">
+        <h1>Services</h1>
+        <div class="box">
+          <div class="vertical">
+            <img class="image-top" src="Image/Service.jpg" alt="Service" />
+            <div class="vertical-title"></div>
+            <div class="vertical-desc">
+              I have completed my Bachelor's Degree in BCA from GOSSNER COLLEGE, RANCHI (Jharkhand).
+              I have completed my Master's Degree in MCA from SARALA BIRLA UNIVERSITY, RANCHI (Jharkhand).
+              I have completed my Intermediate Degree in PCM from ST. JOHN'S INTER COLLEGE, RANCHI (Jharkhand).
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section id="technical" class="secondSection section">
+        <h1>Technical Skill</h1>
+        <div class="box">
+          <div class="vertical">
+            <img class="image-top" src="Image/skill.png" alt="Profile" />
+            <div class="vertical-title"></div>
+            <div class="vertical-desc">
+             <p>FRONT-END:HTML,CSS,BASIC JAVASCRIPT.</p>
+             <p>LANGUAGE:JAVA.</p>
+             <p>DATABASE:MYSQL.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section id="contact" class="secondSection section">
+        <h1>Contact Me</h1>
+        <div class="box">
+          <div class="vertical">
+            <img class="image-top" src="Image/Contact.jpg" alt="Contact" />
+            <div class="vertical-title"></div>
+            <div class="vertical-desc">
+              Mobile No: 87092529029<br>
+              Email: kaushikprasad1659@gmail.com<br>
+              Area: Chatra Basti, Tatisilwai<br>
+              City: Ranchi<br>
+              State: Jharkhand
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
